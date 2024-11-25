@@ -1,0 +1,16 @@
+micronaut:
+  application:
+    name: messageCountTopic
+netty:
+  default:
+    allocator:
+      max-order: 3
+kafka:
+  bootstrap:
+    servers: "localhost:9092"  # Replace with your Kafka server address
+  consumer:
+    group.id: "micronaut-consumer-group"
+    auto.offset.reset: earliest
+
+  topic:
+    name: messageCountTopic
